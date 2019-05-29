@@ -18,7 +18,7 @@ class ChildClass
      * @ORM\Id
      * @ORM\Column(name="id1", type="integer")
      *
-     * @var int
+     * @var integer
      */
     public $id1;
 

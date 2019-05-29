@@ -18,7 +18,7 @@ class ParentClass
      * @ORM\Id
      * @ORM\Column(name="id", type="integer")
      *
-     * @var int
+     * @var integer
      */
     public $id;
 

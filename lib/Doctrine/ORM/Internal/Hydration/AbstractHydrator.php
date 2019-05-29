@@ -12,6 +12,7 @@ use Doctrine\ORM\Events;
 use Doctrine\ORM\Mapping\ClassMetadata;
 use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\ORM\UnitOfWork;
+use PDO;
 use ReflectionClass;
 use function array_map;
 use function array_merge;
@@ -428,6 +429,8 @@ abstract class AbstractHydrator
     }
 
     /**
+     * Retrieve ClassMetadata associated to entity class name.
+     *
      * @return string[]
      */
     private function getDiscriminatorValues(ClassMetadata $classMetadata) : array

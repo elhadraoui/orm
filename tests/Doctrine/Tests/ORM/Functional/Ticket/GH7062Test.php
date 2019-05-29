@@ -23,7 +23,7 @@ class GH7062Test extends OrmFunctionalTestCase
                 GH7062Team::class,
                 GH7062Season::class,
                 GH7062Ranking::class,
-                GH7062RankingPosition::class,
+                GH7062RankingPosition::class
             ]
         );
     }
