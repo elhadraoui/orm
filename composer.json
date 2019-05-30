@@ -1,5 +1,5 @@
 {
-    "name": "doctrine/orm",
+    "name": "elhadraoui/doctrine-orm",
     "type": "library",
     "description": "PHP object relational mapper (ORM) that sits on top of a powerful database abstraction layer (DBAL). One of its key features is the option to write database queries in a proprietary object oriented SQL dialect called Doctrine Query Language (DQL). This provides developers with a powerful alternative to SQL that maintains flexibility without requiring unnecessary code duplication.",
     "keywords": [
@@ -49,6 +49,9 @@
         "ocramius/proxy-manager": "^2.1.1",
         "symfony/console": "~3.2|~4.0",
         "symfony/var-dumper": "^4.1"
+    },
+    "replace": {
+        "doctrine/orm": "self.version"
     },
     "require-dev": {
         "ext-pdo": "*",
