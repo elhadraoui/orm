@@ -115,6 +115,8 @@ class Lexer extends AbstractLexer
     const T_WHEN                 = 254;
     const T_WHERE                = 255;
     const T_WITH                 = 256;
+    
+    private $accents = 'áàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸ';
 
     /**
      * Creates a new query scanner object.
@@ -133,7 +135,7 @@ class Lexer extends AbstractLexer
     {
         return [
             '[a-z_][a-z0-9_]*\:[a-z_][a-z0-9_]*(?:\\\[a-z_][a-z0-9_]*)*', // aliased name
-            '[a-z_\\\][a-z0-9_]*(?:\\\[a-z_][a-z0-9_]*)*', // identifier or qualified name
+            '[a-z_\\\][a-z0-9_]*(?:\\\[a-z_][a-z0-9_'.$this->accents.']*)*', // identifier or qualified name
             '(?:[0-9]+(?:[\.][0-9]+)*)(?:e[+-]?[0-9]+)?', // numbers
             "'(?:[^']|'')*'", // quoted strings
             '\?[0-9]*|:[a-z_][a-z0-9_]*' // parameters
