@@ -1,5 +1,5 @@
 {
-    "name": "doctrine/orm",
+    "name": "elhadraoui/doctrine-orm",
     "type": "library",
     "description": "Object-Relational-Mapper for PHP",
     "keywords": ["orm", "database"],
@@ -30,6 +30,9 @@
         "doctrine/coding-standard": "^5.0",
         "phpunit/phpunit": "^6.5",
         "symfony/yaml": "~3.4|~4.0"
+    },
+    "replace": {
+        "doctrine/orm": "self.version"
     },
     "suggest": {
         "symfony/yaml": "If you want to use YAML Metadata Mapping Driver"
